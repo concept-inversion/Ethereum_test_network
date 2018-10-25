@@ -1,0 +1,3 @@
+eth.blockNumber
+eth.pendingTransactions
+txpool.status
