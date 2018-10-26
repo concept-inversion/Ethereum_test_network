@@ -9,17 +9,12 @@ geth --datadir node1/ --port 30311 --networkid 258525 console
 
 Start with logger
 geth --datadir node2/ --port 30312 --networkid 258525 --verbosity 3  console  2>> C:\Users\ME\Documents\rosebay\ethereum\node5\log\info.log
+
 Unlock account for mining:
 personal.unlockAccount(eth.coinbase,"inversion2222",0)
 
 Start Mining:
 miner.start()
-
-
-"enode://5dd57882d014f446d4266da2d0ea1eb25ce571ea795f73bb7fa3d869a5355e4c7dd75e86fa02a0f4abc584f0bb350158fec1e3b2b2bddb8ce62ac04e64b851d7@[::]:30312"
-
-
-admin.addPeer("enode://023620b19be5344c576387b9cf024940875e1cf23f5af79b933451b7b323aa218eb59d76b0687c076f3974cb16a5f469e638acb7b2dd488f9c71e99cc2fac590@192.168.88.52:30311")
 
 
 
@@ -28,30 +23,29 @@ admin.addPeer("enode://023620b19be5344c576387b9cf024940875e1cf23f5af79b933451b7b
 
 
 Test:
-Node1: geth --datadir node1/ --port 30311 --networkid 258525 --rpc --rpcport 8544 --verbosity 3 console  2>> C:\Users\ME\Documents\rosebay\ethereum\node1\log\info.log
-enode://a2be2552a5eec333a00d48e934a25bda70a62fdf7cbc1b0851c4ab395ea6e5b49863724be90372db46cb0df5b368a9f9467e045be8fc98ffa91a71b257b69cc4@[::]:30311
+Node1: geth --datadir node1/ --port 30311 --networkid 258525 --rpc --rpcport 8544 --verbosity 3 console 2>> C:\Users\ME\Documents\rosebay\ethereum\node1\log\info.log
+enode://51c592255c252b7632a0d0aa564c41574866ae703ed4188a6c2ea31167fc7f048533360a303fc95de48c152a74d519baea33c21aa48d98afc5ccb2227a9eac57@[::]:30311
 
-admin.addPeer("enode://7129e9c99e27b80680f7be28f92e6d6ca731c25065e6608431ac2de75d117dbce2575dea802f99fe1318c2a3587bff4c6032241171aa66850def2ecd9d870979@[::]:30313")
-admin.addPeer("enode://5dd57882d014f446d4266da2d0ea1eb25ce571ea795f73bb7fa3d869a5355e4c7dd75e86fa02a0f4abc584f0bb350158fec1e3b2b2bddb8ce62ac04e64b851d7@[::]:30312")
+admin.addPeer"("enode://a31c8401807ab02e9a33f639848d0a857d6224bac5906e6d166a32d1bb672c14ed0ef3b528df9e63affc1e34008d6aa22c3bd4f674a1c82ac7b6859abbd51cdc@[::]:30313")
+admin.addPeer("enode://3adc6fe74f36c808cd31ea99409de34544ff93a2c51b0e8d15124777c0eb9a811c283349c4fc146a2a06f6288ef8243763b981d7b7034543ef2fe3717cd57930@[::]:30312")
 
 
 Node2: geth --datadir node2/ --port 30312 --networkid 258525 --rpc --rpcport 8545 --ipcdisable --verbosity 3  console  2>> C:\Users\ME\Documents\rosebay\ethereum\node2\log\info.log
-enode://5dd57882d014f446d4266da2d0ea1eb25ce571ea795f73bb7fa3d869a5355e4c7dd75e86fa02a0f4abc584f0bb350158fec1e3b2b2bddb8ce62ac04e64b851d7@[::]:30312
+enode://3adc6fe74f36c808cd31ea99409de34544ff93a2c51b0e8d15124777c0eb9a811c283349c4fc146a2a06f6288ef8243763b981d7b7034543ef2fe3717cd57930@[::]:30312
 
 
 
 Node3: geth --datadir node3/ --port 30313 --networkid 258525 --rpc --rpcport 8546 --ipcdisable --verbosity 3  console  2>> C:\Users\ME\Documents\rosebay\ethereum\node3\log\info.log
-enode://7129e9c99e27b80680f7be28f92e6d6ca731c25065e6608431ac2de75d117dbce2575dea802f99fe1318c2a3587bff4c6032241171aa66850def2ecd9d870979@[::]:30313
-
+enode://a31c8401807ab02e9a33f639848d0a857d6224bac5906e6d166a32d1bb672c14ed0ef3b528df9e63affc1e34008d6aa22c3bd4f674a1c82ac7b6859abbd51cdc@[::]:30313
 
 
 Node4: geth --datadir node4/ --port 30314 --networkid 258525 --rpc --rpcport 8547 --ipcdisable --verbosity 3  console  2>> C:\Users\ME\Documents\rosebay\ethereum\node4\log\info.log
-enode://7aaf21b7a7046cfdfb3769980b30e53d60739fc80c6c007f5e867ba542d149a65416a149556ad80e16f524e97f077c07b4bb45f15d02347dab8269fb6deef5c0@[::]:30314
+enode://68f40be6070e9c5bc1f6201c09c3588b5ae0928baeb24d281d1dfc5cc9d3f1ce3a984f842ab1f9eafe4a6731b3aa2a8a6f26a200c7f2ccae3be179652a86e7b7@[::]:30314
 
-admin.addPeer("enode://7129e9c99e27b80680f7be28f92e6d6ca731c25065e6608431ac2de75d117dbce2575dea802f99fe1318c2a3587bff4c6032241171aa66850def2ecd9d870979@[::]:30313")
-admin.addPeer("enode://5dd57882d014f446d4266da2d0ea1eb25ce571ea795f73bb7fa3d869a5355e4c7dd75e86fa02a0f4abc584f0bb350158fec1e3b2b2bddb8ce62ac04e64b851d7@[::]:30312")
-admin.addPeer("enode://dc70eae519c141009c10c4333bb7c1bba457c7d3c94ec87089bffd186130ce1ba281c505f538c3ca6059c410b180fea98e710aed8f965c530eae220bd0d7b333@[::]:30315")
+admin.addPeer("enode://a31c8401807ab02e9a33f639848d0a857d6224bac5906e6d166a32d1bb672c14ed0ef3b528df9e63affc1e34008d6aa22c3bd4f674a1c82ac7b6859abbd51cdc@[::]:30313")
+admin.addPeer("enode://3adc6fe74f36c808cd31ea99409de34544ff93a2c51b0e8d15124777c0eb9a811c283349c4fc146a2a06f6288ef8243763b981d7b7034543ef2fe3717cd57930@[::]:30312")
+admin.addPeer("enode://fec9ae6e0eb4fe0009b553ba524b9aa45f7068f94c8a4da3569ec5f683aae12cfcfb947bb9cacd4a8546445c4d57eab2accc83372b7177e09b8af2ec8772ffe3@[::]:30315")
 
 
 Node5: geth --datadir node5/ --port 30315 --networkid 258525 --rpc --rpcport 8548 --ipcdisable --verbosity 3  console  2>> C:\Users\ME\Documents\rosebay\ethereum\node5\log\info.log
-enode://dc70eae519c141009c10c4333bb7c1bba457c7d3c94ec87089bffd186130ce1ba281c505f538c3ca6059c410b180fea98e710aed8f965c530eae220bd0d7b333@[::]:30315
+enode://fec9ae6e0eb4fe0009b553ba524b9aa45f7068f94c8a4da3569ec5f683aae12cfcfb947bb9cacd4a8546445c4d57eab2accc83372b7177e09b8af2ec8772ffe3@[::]:30315
